@@ -1,0 +1,147 @@
+
+What is Cloud trace ? 
+
+ 
+
+ 
+
+Distributed Tracing System for google cloud. 
+
+It helps  us understand  
+
+" How long it takes our application to handle incoming request from users or others applications. 
+
+Stack driver  trace ie is a distributed tracing system that collects data from  our application and displays it in the Google Cloud platform console. 
+
+ 
+
+Can help in Finding Performance bottleneck 
+
+Fast Automatic issue detection 
+
+Broad platform support( trace SDK currently supports Java, Node.JS, Ruby and Go) 
+
+Trace API – Submit/Retrieve trace data from any source 
+
+ZIPkin collectctor  : used for submit data to cloud trace 
+
+ 
+
+ 
+
+First Demo 
+
+Trace App latency by using Cloud trace  
+
+Deploying a sample Application to a Google Kubernetes Engine cluster 
+
+Create a trace by sending an HTTP request to the sample Application 
+
+Use the cloud trace interface to view the latency information of the trace we created. 
+
+Distributed tracing with Spring Cloud Sleuth and Cloud Trace  |  Google Codelabs 
+
+Second Demo 
+
+Distributed tracing with Spring Cloud Sleuth and cloud trace 
+
+We Will Create setup for Creating a REST Service 
+
+Create a new spring boot REST service 
+
+Will Enable CLOUD trace API 
+
+Create a Second Spring boot web application 
+
+Update First Service to consume Second Service 
+
+We Will review latency Distribution & Performance report   
+
+That’s How we will get to know how google app engine web application work 
+
+Deploy a Spring Boot Java app to Kubernetes on Google Kubernetes Engine  |  Google Codelabs 
+
+Third Demo 
+
+Build and launch a Spring Boot java App from Cloud Shell  
+
+Initializing a new spring boot app 
+
+gcloud  auth list 
+
+GCloud config list project 
+
+$ curl https://start.spring.io/starter.tgz \ -d dependencies=web -d baseDir=helloworld | tar -xzvf - 
+
+ 
+
+Creating a new RESTful service with the code editor 
+
+ 
+
+
+package com.example.demo; 
+
+ 
+ 
+
+import org.springframework.boot.SpringApplication; 
+
+import org.springframework.boot.autoconfigure.SpringBootApplication; 
+
+import org.springframework.web.bind.annotation.*; 
+
+ 
+ 
+
+@SpringBootApplication 
+
+public class DemoApplication { 
+
+ 
+ 
+
+    public static void main(String[] args) { 
+
+        SpringApplication.run(DemoApplication.class, args); 
+
+    } 
+
+ 
+ 
+
+} 
+
+ 
+ 
+
+@RestController 
+
+class Helloworld { 
+
+    @GetMapping("/") 
+
+    public  String greeting(){ 
+
+            return "Hello!!"; 
+
+    } 
+
+} 
+
+ 
+
+ 
+
+Run the App locally 
+
+That’s How we will be able to build & launch a new spring boot java web app directly from the cloud shell  
+
+ 
+
+Build and launch a Spring Boot Java app from Cloud Shell  |  Google Codelabs 
+
+Google Code lab  
+
+Java Programming Language  |  Google Cloud 
+
